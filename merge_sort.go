@@ -1,6 +1,6 @@
 package main
 
-func merge_sort(arr []int) {
+func mergeSort(arr []int) {
 	if len(arr) == 1 {
 		return
 	}
@@ -12,11 +12,10 @@ func merge_sort(arr []int) {
 	copy(left, arr[:mid])
 	copy(right, arr[mid:])
 
-	merge_sort(left)
-	merge_sort(right)
+	mergeSort(left)
+	mergeSort(right)
 	merge(arr, left, right)
 }
-
 
 func merge(result, left, right []int) {
 	var l, r, i int // default to 0

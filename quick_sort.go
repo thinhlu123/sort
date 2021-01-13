@@ -1,6 +1,6 @@
 package main
 
-func quick_sort(a []int) []int {
+func quickSort(a []int) []int {
 
 	if len(a) < 2 {
 		return a
@@ -22,8 +22,8 @@ func quick_sort(a []int) []int {
 
 	a[left], a[right] = a[right], a[left]
 
-	quick_sort(a[:left])
-	quick_sort(a[left+1:])
+	quickSort(a[:left])
+	quickSort(a[left+1:])
 
 	return a
 }
